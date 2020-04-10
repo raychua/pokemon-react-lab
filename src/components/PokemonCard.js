@@ -31,14 +31,18 @@ function PokemonCard({ pokemon }) {
       <div className="name">{name.english}</div>
       <div className="pokemontypes">{showTypes(type)}</div>
       <div className="attributes">
-        <ul>
-          <li>HP : {base.HP}</li>
-          <li>Attack : {base.Attack}</li>
-          <li>Defence : {base.Defence}</li>
-          <li>SpAttack : {base.SpAttack}</li>
-          <li>SpDefence : {base.SpDefence}</li>
-          <li>Speed : {base.Speed}</li>
-        </ul>
+        <div className="HP">HP</div>
+        <div className="HP Value">: {base.HP}</div>
+        <div className="Attack">Attack</div>
+        <div className="Attack Value">: {base.Attack}</div>
+        <div className="Defence">Defence</div>
+        <div className="Defence Value">: {base.Defence}</div>
+        <div className="SpAttack">SpAttack</div>
+        <div className="SpAttack Value">: {base.SpAttack}</div>
+        <div className="SpDefence">SpDefence</div>
+        <div className="SpDefence Value">: {base.SpDefence}</div>
+        <div className="Speed">Speed</div>
+        <div className="Speed Value">: {base.Speed}</div>
       </div>
     </div>
   );
