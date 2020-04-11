@@ -18,6 +18,21 @@ function PokemonGallery() {
           alt="Header Logo"
         />
       </div>
+      <div className="searchgrid">
+        <div className="left"></div>
+        <div className="search">
+          <span className="searchtext">Search Pokemon</span>
+          <span className="searchfield">
+            <input
+              id="Search"
+              type="text"
+              placeholder="Type Pokemon Name Here"
+            />
+          </span>
+          <input type="submit" value="Submit"></input>
+        </div>
+        <div className="right"></div>
+      </div>
       <div className="gallerylist">{newArray}</div>
     </div>
   );

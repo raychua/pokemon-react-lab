@@ -5,7 +5,7 @@ import PokemonGallery from "./components/PokemonGallery";
 function App() {
   return (
     <div className="App">
-      <PokemonGallery />;
+      <PokemonGallery />
     </div>
   );
 }
