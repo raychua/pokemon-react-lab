@@ -28,8 +28,8 @@ function PokemonGallery() {
               type="text"
               placeholder="Type Pokemon Name Here"
             />
+            <input type="button" value="Search"></input>
           </span>
-          <input type="submit" value="Submit"></input>
         </div>
         <div className="right"></div>
       </div>
