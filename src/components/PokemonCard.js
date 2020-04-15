@@ -5,9 +5,10 @@ const IMAGE_LINK = "/pokemonImage/";
 
 function showTypes(type) {
   const newArray = [];
+  let i = 0;
   type.forEach((element) => {
     newArray.push(
-      <div className="pokemontype">
+      <div className="pokemontype" key={i++}>
         <img
           src={process.env.PUBLIC_URL + IMAGE_LINK + element + ".png"}
           alt={element}
