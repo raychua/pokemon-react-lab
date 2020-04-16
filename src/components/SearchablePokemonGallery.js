@@ -1,10 +1,13 @@
 import React from "react";
 import "../App.css";
+
 import axios from "axios";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 import SearchHeader from "./SearchHeader";
+import PowerFilterHeader from "./PowerFilterHeader";
 import PokemonGallery from "./PokemonGallery";
+import POKEMON from "../pokemon/pokemon";
 
 class SearchablePokemonGallery extends React.Component {
   constructor(props) {
@@ -12,6 +15,9 @@ class SearchablePokemonGallery extends React.Component {
     this.state = {
       search: "",
       pokemonData: [],
+      searchedPokemonList: [],
+      filteredPokemonList: [],
+      finalPokemonList: [],
       errorMessage: null,
       isLoading: false,
     };
@@ -19,16 +25,22 @@ class SearchablePokemonGallery extends React.Component {
 
   componentDidMount() {
     this.setState({
-      isLoading: true,
+      isLoading: false,
+      pokemonData: [...POKEMON],
+      searchedPokemonList: [...POKEMON],
+      filteredPokemonList: [...POKEMON],
+      finalPokemonList: [...POKEMON],
     });
     axios(
       "https://us-central1-pokedex-23fb6.cloudfunctions.net/app/pokemonData"
     )
       .then((res) => {
         this.setState({
-          pokemonData: res.data,
-        });
-        this.setState({
+          /*           pokemonData: res.data,
+          searchedPokemonList: res.data,
+          filteredPokemonList: res.data,
+          finalPokemonList: res.data, */
+
           isLoading: false,
         });
       })
@@ -38,16 +50,33 @@ class SearchablePokemonGallery extends React.Component {
       });
   }
 
-  searchPokemon = (searchText) => {
-    this.setState({ search: searchText });
+  setSearchedList = (searchedPokemon) => {
+    this.setState(
+      {
+        searchedPokemonList: [...searchedPokemon],
+      },
+      function () {
+        this.setFinalList();
+      }
+    );
   };
 
-  filterPokemon() {
-    return this.state.pokemonData.filter((pokemon) => {
-      return pokemon.name.english
-        .toUpperCase()
-        .includes(this.state.search.toUpperCase());
-    });
+  setFilteredList = (filteredPokemons) => {
+    this.setState(
+      {
+        filteredPokemonList: [...filteredPokemons],
+      },
+      function () {
+        this.setFinalList();
+      }
+    );
+  };
+
+  setFinalList() {
+    const tempList = this.state.searchedPokemonList.filter((element) =>
+      this.state.filteredPokemonList.includes(element)
+    );
+    this.setState({ finalPokemonList: [...tempList] });
   }
 
   showGallery() {
@@ -59,8 +88,15 @@ class SearchablePokemonGallery extends React.Component {
             alt="Header Logo"
           />
         </div>
-        <SearchHeader searchPokemon={this.searchPokemon} />
-        <PokemonGallery pokemonData={this.filterPokemon()} />
+        <SearchHeader
+          pokemonData={this.state.pokemonData}
+          setFilteredList={this.setSearchedList}
+        />
+        <PowerFilterHeader
+          pokemonData={this.state.pokemonData}
+          setFilteredList={this.setFilteredList}
+        />
+        <PokemonGallery pokemonData={this.state.finalPokemonList} />
       </div>
     );
   }

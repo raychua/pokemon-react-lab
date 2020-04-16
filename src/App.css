@@ -4,6 +4,7 @@
 
 .logo {
   text-align: center;
+  height: 300px;
 }
 
 .gallery {
@@ -215,16 +216,17 @@
   text-align: center;
   width: 900px;
   height: 50px;
-  color: #ad0606;
+  color: #ffffff;
   padding-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 30px;
   border: 3px solid #403f44;
-  background-color: #fff6b4;
+  background-color: #eb1458;
   font-weight: bold;
   font-size: 30px;
 }
 
 .imageSize {
   margin-top: 100px;
+  padding-bottom: 500px;
 }

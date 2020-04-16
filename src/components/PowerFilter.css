@@ -1,0 +1,22 @@
+.PowerFilterArea {
+  background-color: #fff6b4;
+  display: flex;
+  margin-top: 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 80px;
+}
+.PowerFilter {
+  margin: 50px 20px 10px 20px;
+}
+
+.PowerFilter img:hover {
+  height: 63px;
+  width: 63px;
+}
+
+.notSelected {
+  opacity: 0.2;
+}

@@ -25,7 +25,7 @@ function PokemonCard({ pokemon }) {
   const imgId = "/pokemonImage/" + id + ".png";
 
   return (
-    <div className="pokemoncard">
+    <div className="pokemoncard" data-testid="pokemon-card">
       <div className="pokemonpic">
         <img src={process.env.PUBLIC_URL + imgId} alt={name.english} />
       </div>
