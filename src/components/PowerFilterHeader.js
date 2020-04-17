@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import "./PowerFilter.css";
+import "./PowerFilterHeader.css";
 import POWERTYPES from "../pokemon/Powertypes";
 
 const IMAGE_LINK = "/pokemonImage/";

@@ -15,6 +15,7 @@
 .PowerFilter img:hover {
   height: 63px;
   width: 63px;
+  cursor: pointer;
 }
 
 .notSelected {

@@ -1,0 +1,152 @@
+.pokemoncard {
+  text-align: center;
+  margin-left: 30px;
+  background-color: #fdfdfdee;
+  opacity: 1;
+  border: 1px solid #777777;
+  padding: 10px;
+  width: 200px;
+  height: 320px;
+  box-shadow: 3px 5px 8px 2px #888888;
+}
+
+.pokemonpic {
+  border: 0px solid #d3d2d7;
+  border-radius: 8px;
+  background-color: #d3d2d7;
+  background-image: url("/pokemonImage/PokemonBg1.png");
+  background-size: cover;
+  width: 130px;
+  height: 130px;
+  left: 35px;
+  top: 0px;
+  position: relative;
+  align-self: center;
+}
+
+.pokemonpic img {
+  max-height: 80%;
+  max-width: 80%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  filter: drop-shadow(0 0 7px #dddddd);
+}
+
+.name {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 3px;
+  color: #403f44;
+}
+
+.pokemontypes {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  align-self: center;
+}
+
+.pokemontype {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  align-self: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.Fire {
+  color: #ad0606;
+  filter: drop-shadow(0 0 6px #ad0606);
+}
+
+.Grass,
+.Bug {
+  color: #028a1f;
+  filter: drop-shadow(0 0 6px #028a1f);
+}
+
+.Poison,
+.Ground {
+  color: #a83702;
+  filter: drop-shadow(0 0 6px #a83702);
+}
+
+.Normal {
+  color: #403f44;
+  filter: drop-shadow(0 0 6px #403f44);
+}
+
+.Electric {
+  color: #c5b803ee;
+  filter: drop-shadow(0 0 6px #c5b803ee);
+}
+
+.Flying,
+.Water {
+  color: #054c9e;
+  filter: drop-shadow(0 0 6px #054c9e);
+}
+
+.Fairy {
+  color: #da0099ee;
+  filter: drop-shadow(0 0 6px #da0099ee);
+}
+
+.pokemontype img {
+  max-height: 40px;
+  max-width: 40px;
+  position: absolute;
+  top: 12px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.attributes {
+  display: grid;
+  margin-top: 20px;
+  margin-left: 50px;
+  grid-template-columns: 80px 40px;
+  grid-gap: 0px;
+  color: #403f44;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.notfoundcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.notfound {
+  align-items: center;
+  text-align: center;
+  width: 900px;
+  height: 50px;
+  color: #ffffff;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+  border: 3px solid #403f44;
+  background-color: #eb1458;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.imageSize {
+  margin-top: 100px;
+  padding-bottom: 500px;
+}

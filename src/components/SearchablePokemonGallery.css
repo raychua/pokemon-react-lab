@@ -1,0 +1,22 @@
+.logo {
+  text-align: center;
+  height: 300px;
+}
+
+.gallery {
+  background-color: #fff6b4;
+  background-image: url("/pokemonImage/PokeballBg.png");
+  background-repeat: repeat;
+}
+
+.gallerylist {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallerylist > div {
+  width: 200px;
+  margin: 20px;
+}

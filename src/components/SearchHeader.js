@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "./SearchHeader.css";
 
 class SearchHeader extends React.Component {
   constructor(props) {

@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "./SearchablePokemonGallery.css";
 
 import axios from "axios";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -19,28 +20,20 @@ class SearchablePokemonGallery extends React.Component {
       filteredPokemonList: [],
       finalPokemonList: [],
       errorMessage: null,
-      isLoading: false,
+      isLoading: true,
     };
   }
 
   componentDidMount() {
-    this.setState({
-      isLoading: false,
-      pokemonData: [...POKEMON],
-      searchedPokemonList: [...POKEMON],
-      filteredPokemonList: [...POKEMON],
-      finalPokemonList: [...POKEMON],
-    });
     axios(
       "https://us-central1-pokedex-23fb6.cloudfunctions.net/app/pokemonData"
     )
       .then((res) => {
         this.setState({
-          /*           pokemonData: res.data,
+          pokemonData: res.data,
           searchedPokemonList: res.data,
           filteredPokemonList: res.data,
-          finalPokemonList: res.data, */
-
+          finalPokemonList: res.data,
           isLoading: false,
         });
       })
